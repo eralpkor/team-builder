@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   const [teamMember, setTeamMember] = useState(data);
   const addNewMember = member => {
-    setTeamMember([...teamMember, member])
+    setTeamMember([...teamMember, member]);
   }
 
   return (

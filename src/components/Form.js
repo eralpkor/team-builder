@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 function Form(props) {
   const [team, setTeam] = useState({ first: '', last: '', role: '' });
   
+  console.log(team)
+
   const handleChange = e => {
     setTeam({...team, [e.target.name]: e.target.value})
   }
@@ -30,8 +32,8 @@ function Form(props) {
           value={team.first}
           onChange={handleChange}
         />
-      </form>
-      <form >
+      
+      
         <label htmlFor='last'>Last Name</label>
         <input
           type='text'
@@ -40,9 +42,9 @@ function Form(props) {
           value={team.last}
           onChange={handleChange}
         />
-      </form>
-      <form >
-        <label htmlFor='email'>Email</label>
+      
+      
+        <label htmlFor='role'>Role</label>
         <input
           type='text'
           name='role'
