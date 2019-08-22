@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+
 import data from './data';
 import Form from '../src/components/Form';
 import Card from '../src/components/Cards';
@@ -8,6 +10,7 @@ import './App.css';
 
 function App() {
   const [teamMember, setTeamMember] = useState(data);
+
   const addNewMember = member => {
     setTeamMember([...teamMember, member]);
   }
@@ -25,7 +28,10 @@ function App() {
       <h1>My Team</h1>
       <Form addNewMember={addNewMember} />
 
-      <Card teamList={teamMember}/>
+      <div className='card-container'>
+        <Card teamList={teamMember}/>
+      </div>
+      
     </div>
   )
 }

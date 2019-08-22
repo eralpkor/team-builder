@@ -2,60 +2,76 @@ import React, { useState } from 'react';
 
 
 function Form(props) {
-  const [team, setTeam] = useState({ first: '', last: '', role: '' });
-  
-  console.log(team)
+  const [team, setTeam] = useState({
+    first: "",
+    last: "",
+    role: "",
+    email: ""
+  });
 
   const handleChange = e => {
-    setTeam({...team, [e.target.name]: e.target.value})
-  }
+    setTeam({ ...team, [e.target.name]: e.target.value });
+  };
 
   const submitForm = e => {
     e.preventDefault();
+
     const newMember = {
       ...team,
       id: Date.now()
     };
-    props.addNewMember(newMember);
-    setTeam({ first: '', last: '',  role: ''})
-  }
+    // added for validation
+    if (!newMember.first || !newMember.email || !newMember.role) {
+      alert("All fields must have value.");
+    } else {
+      props.addNewMember(newMember);
+      // setTeam({ first: "", last: "", role: "", email: "" });
+    }
+    console.log(team)
+  };
 
   return (
-    <div className='team-form'>
-      
+    <div className="team-form">
       <form onSubmit={submitForm}>
-        <label htmlFor='first'>First Name</label>
+        <label htmlFor="first">Name</label>
         <input
-          type='text'
-          name='first'
-          placeholder='First name here'
+          type="text"
+          name="first"
+          placeholder="Name"
           value={team.first}
           onChange={handleChange}
         />
-      
-      
-        <label htmlFor='last'>Last Name</label>
+
+        {/* <label htmlFor='last'>Last Name</label>
         <input
           type='text'
           name='last'
           placeholder='Last name here'
           value={team.last}
           onChange={handleChange}
-        />
-      
-      
-        <label htmlFor='role'>Role</label>
+        /> */}
+
+        <label htmlFor="email">email</label>
         <input
-          type='text'
-          name='role'
-          placeholder='Job description'
+          type="text"
+          name="email"
+          placeholder="email"
+          value={team.email}
+          onChange={handleChange}
+        />
+
+        <label htmlFor="role">Role</label>
+        <input
+          type="text"
+          name="role"
+          placeholder="Job description"
           value={team.role}
           onChange={handleChange}
         />
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
-  )
+  );
 }
 
 export default Form;

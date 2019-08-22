@@ -43,7 +43,7 @@ button {
   background: rgb(20, 67, 220);
   background-image: linear-gradient(-315deg, rgb(20, 83, 220) 40%,#9c96bb 100%);
   border: 1px solid #9398e2;
-  padding: 10px 50px;
+  padding: 5px 50px;
   font-size: 16px;
   color: #faf2f2;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.12), 0 2px 2px 1px rgba(0, 0, 0, 0.24);
@@ -63,6 +63,13 @@ button:active {
 .team-form {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  background: rgba(223, 175, 103, 0.63);
+  border: 1px solid rgba(223, 175, 103, 0.63);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 form {
@@ -73,7 +80,7 @@ form {
 
 input, textarea {
   width: 200px;
-  padding: 15px 22px;
+  padding: 5px 10px;
   margin: 10px 5px;
   box-sizing: border-box;  
   border: 2px solid #0a5daa;
@@ -82,6 +89,28 @@ input, textarea {
 
 .card {
   background: #9398e2;
-  width: 500px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }
+
+.card-container {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* .card-container {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.card-container>* {
+  flex: 1 1 80px;
+  background: #9398e2;
+} */
