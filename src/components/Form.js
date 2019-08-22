@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 function Form(props) {
   const [team, setTeam] = useState({
     first: "",
@@ -41,15 +40,6 @@ function Form(props) {
           value={team.first}
           onChange={handleChange}
         />
-
-        {/* <label htmlFor='last'>Last Name</label>
-        <input
-          type='text'
-          name='last'
-          placeholder='Last name here'
-          value={team.last}
-          onChange={handleChange}
-        /> */}
 
         <label htmlFor="email">email</label>
         <input

@@ -93,7 +93,9 @@ input, textarea {
   height: 200px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  /* align-items: flex-start; */
+  margin: 16px auto;
+  /* padding-left: 10px; */
 }
 
 .card-container {

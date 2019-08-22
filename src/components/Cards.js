@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Card = (props) => {
   console.log(props);
   return (
@@ -8,7 +7,7 @@ const Card = (props) => {
     {props.teamList.map(member => {
       return (
         <div className='card' key={member.id}>
-          <h2>{member.first} {member.last}</h2>
+          <h2>{member.first}</h2>
           <p>{member.email}</p>
           
           <p>{member.role}</p>
