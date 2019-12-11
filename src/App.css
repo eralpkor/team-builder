@@ -1,0 +1,118 @@
+body {
+  background: #eacda3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eacda3, #d6ae7b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eacda3, #d6ae7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.App {
+  text-align: center;
+  margin-top: 50px;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  background: rgb(20, 67, 220);
+  background-image: linear-gradient(-315deg, rgb(20, 83, 220) 40%,#9c96bb 100%);
+  border: 1px solid #9398e2;
+  padding: 5px 50px;
+  font-size: 16px;
+  color: #faf2f2;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.12), 0 2px 2px 1px rgba(0, 0, 0, 0.24);
+  transition: all 0.2 ease-in;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.12), 0 2px 3px 2px rgba(0, 0, 0, 0.24);
+  background: #7c88aa;
+}
+button:active {
+  background: rgb(20, 83, 220);
+          box-shadow: inset 0px 0px 5px crimson;
+   outline: none;
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  background: rgba(223, 175, 103, 0.63);
+  border: 1px solid rgba(223, 175, 103, 0.63);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+input, textarea {
+  width: 200px;
+  padding: 5px 10px;
+  margin: 10px 5px;
+  box-sizing: border-box;  
+  border: 2px solid #0a5daa;
+  border-radius: 4px;
+}
+
+.card {
+  background: #9398e2;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  margin: 16px auto;
+  /* padding-left: 10px; */
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* .card-container {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.card-container>* {
+  flex: 1 1 80px;
+  background: #9398e2;
+} */
